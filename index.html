@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sommatif 1</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+</head>
+<body>
+<form class="container" id="detailsContainer" method="post" enctype="application/x-www-form-urlencoded" action="http://localhost:3000/movies" onsubmit="onSubmitMovie()">
+    <div class="inputContainer"><label for="movie_title">Title : </label><input id="movie_title" name="movie_title" type="text" required></div>
+    <div class="inputContainer"><label for="movie_genres">Genre : </label><input id="movie_genres" name="movie_genres" type="text" required></div>
+    <div class="inputContainer"><label for="release_date">Release date : </label><input id="release_date" name="release_date" type="date" required></div>
+    <div class="inputContainer"><label for="original_voice_acting">Original voice acting : </label><input id="original_voice_acting" name="original_voice_acting" type="text"></div>
+    <div class="inputContainer">
+        <input id="submit" type="submit" value="Ajouter"/>
+        <input onclick="clearDetailsView()" type="reset" value="Annuler"/>
+        <input id="deleteButton" class="hiddenButton" type="reset" value="Supprimer"/>
+    </div>
+</form>
+
+<div class="inputContainer">
+    <button id="firstPageNav"><<</button>
+    <button id="prevPageNav"><</button>
+    <button id="nextPageNav">></button>
+    <button id="lastPageNav">>></button>
+</div>
+
+<label id="labelSelectPages" for="selectNumberParPages">x/x</label>
+<select id="selectNumberParPages" onchange="selectOnClick()"></select>
+<a id="pdfDownloadLink" href="#">Télécharger en PDF</a>
+
+<table class="container">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody id="moviesContainer">
+    </tbody>
+</table>
+
+<script src="./frontendScripts/main.js"></script>
+
+</body>
+</html>

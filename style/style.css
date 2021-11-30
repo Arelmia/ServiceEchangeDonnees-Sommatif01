@@ -1,0 +1,44 @@
+.container {
+    padding: 10px;
+    border: solid black 2px;
+    display: table;
+    margin-bottom: 10px;
+}
+
+.inputContainer {
+    margin: 10px;
+}
+
+.selectedMovie {
+    background: gray !important;
+}
+
+td {
+    padding: 3px 5px;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(2n) {
+    background: lightgray;
+    margin: 0;
+}
+
+tr {
+    border: solid black 1px;
+}
+
+.movieRow:hover {
+    cursor: pointer;
+    background: darkgray;
+}
+
+table {
+    border-collapse: collapse !important;
+}
+
+.hiddenButton {
+    visibility: hidden;
+}
